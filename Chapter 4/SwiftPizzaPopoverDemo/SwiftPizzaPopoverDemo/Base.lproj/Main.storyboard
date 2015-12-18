@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftPizzaPopoverDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dga-NP-HcH">
+                                <rect key="frame" x="20" y="20" width="128" height="128"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.0" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="HYx-tv-e2a"/>
+                                    <constraint firstAttribute="height" constant="128" id="IGb-Bh-1i1"/>
+                                </constraints>
+                                <state key="normal" title="Popover">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="popoverButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AWC-1j-6mV"/>
+                                </connections>
+                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BYj-j0-QCN">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Pizza" id="ROG-Uj-glO">
+                                        <connections>
+                                            <action selector="barButtonPopover:" destination="BYZ-38-t0r" id="ZvK-7R-dej"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Wk6-JP-jT4"/>
+                                    <barButtonItem title="Coffee" id="Scu-ha-BjD">
+                                        <connections>
+                                            <segue destination="k8r-Jq-mlu" kind="popoverPresentation" identifier="Coffee Popover" popoverAnchorBarButtonItem="Scu-ha-BjD" id="KTL-vT-dDt">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BYj-j0-QCN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="A3J-Cg-5nF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BYj-j0-QCN" secondAttribute="bottom" id="BAG-F2-f6B"/>
+                            <constraint firstItem="Dga-NP-HcH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="EN3-vQ-jt5"/>
+                            <constraint firstAttribute="trailing" secondItem="BYj-j0-QCN" secondAttribute="trailing" id="F4m-IL-lJu"/>
+                            <constraint firstItem="Dga-NP-HcH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="jTl-On-JFY"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Pizza View Controller-->
+        <scene sceneID="92o-Xf-bk2">
+            <objects>
+                <viewController id="k8r-Jq-mlu" customClass="PizzaViewController" customModule="SwiftPizzaPopoverDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Iy-ES-bXV"/>
+                        <viewControllerLayoutGuide type="bottom" id="0K1-Pz-lcC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a3H-a4-dVk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coffee" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zN-2G-Y93">
+                                <rect key="frame" x="0.0" y="20" width="600" height="100"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="AbF-44-fYE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jc0-iR-Lpm">
+                                <rect key="frame" x="40" y="550" width="520" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pizzaDone:" destination="k8r-Jq-mlu" eventType="touchUpInside" id="XfP-B2-u27"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jc0-iR-Lpm" firstAttribute="leading" secondItem="a3H-a4-dVk" secondAttribute="leadingMargin" constant="20" id="3Ve-DI-LBb"/>
+                            <constraint firstItem="9zN-2G-Y93" firstAttribute="top" secondItem="9Iy-ES-bXV" secondAttribute="bottom" id="5qX-5B-blx"/>
+                            <constraint firstItem="9zN-2G-Y93" firstAttribute="leading" secondItem="a3H-a4-dVk" secondAttribute="leadingMargin" constant="-20" id="D5p-hO-uub"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9zN-2G-Y93" secondAttribute="trailing" constant="-20" id="M57-ee-5NE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jc0-iR-Lpm" secondAttribute="trailing" constant="20" id="md7-Ao-r5H"/>
+                            <constraint firstItem="0K1-Pz-lcC" firstAttribute="top" secondItem="Jc0-iR-Lpm" secondAttribute="bottom" constant="20" id="tqb-Yv-7MT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pizzaDone" destination="Jc0-iR-Lpm" id="i9c-w5-ReN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mV0-2x-tXd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="1139"/>
+        </scene>
+        <!--Pizza View Controller-->
+        <scene sceneID="Vfp-AY-FTR">
+            <objects>
+                <viewController storyboardIdentifier="PizzaViewController" id="YNg-PD-ABe" customClass="PizzaViewController" customModule="SwiftPizzaPopoverDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VGL-bo-N7R"/>
+                        <viewControllerLayoutGuide type="bottom" id="ll5-Ms-eBe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ak4-cI-s9j">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pizza" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpN-Bd-g97">
+                                <rect key="frame" x="0.0" y="20" width="600" height="100"/>
+                                <color key="backgroundColor" red="0.8901960784313725" green="0.27058823529411763" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="jlr-q0-eW7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GrK-5i-hwB">
+                                <rect key="frame" x="40" y="550" width="520" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pizzaDone:" destination="YNg-PD-ABe" eventType="touchUpInside" id="wCs-y1-Jiw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ll5-Ms-eBe" firstAttribute="top" secondItem="GrK-5i-hwB" secondAttribute="bottom" constant="20" id="DuN-uH-8Dm"/>
+                            <constraint firstItem="GrK-5i-hwB" firstAttribute="leading" secondItem="Ak4-cI-s9j" secondAttribute="leadingMargin" constant="20" id="Myh-rs-Me9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vpN-Bd-g97" secondAttribute="trailing" constant="-20" id="N54-nt-Zbd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GrK-5i-hwB" secondAttribute="trailing" constant="20" id="TBm-19-vmi"/>
+                            <constraint firstItem="vpN-Bd-g97" firstAttribute="leading" secondItem="Ak4-cI-s9j" secondAttribute="leadingMargin" constant="-20" id="Vbh-KY-Oyh"/>
+                            <constraint firstItem="vpN-Bd-g97" firstAttribute="top" secondItem="VGL-bo-N7R" secondAttribute="bottom" id="p7W-ED-Lys"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lit-cx-cnZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1015" y="15"/>
+        </scene>
+    </scenes>
+</document>

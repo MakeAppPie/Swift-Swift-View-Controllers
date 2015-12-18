@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyModalVC" customModule="SwiftXibModalDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="pieLabel" destination="P2u-g7-Xn3" id="f57-Zb-xdP"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xA3-VP-Hsq">
+                    <rect key="frame" x="0.0" y="50" width="600" height="530"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="256" text="What is my Pie?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2u-g7-Xn3">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="135"/>
+                            <animations/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pwZ-6B-RPg">
+                            <rect key="frame" x="0.0" y="155" width="600" height="288"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="C7G-ed-Pdg">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="134"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEW-4b-rAa">
+                                            <rect key="frame" x="0.0" y="0.0" width="187" height="134"/>
+                                            <animations/>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <state key="normal" title="Pizza">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="pieSelectionButton:" destination="-1" eventType="touchUpInside" id="lVK-t2-ysC"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHD-hc-OmC">
+                                            <rect key="frame" x="207" y="0.0" width="186" height="134"/>
+                                            <animations/>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <state key="normal" title="Chicken Pot">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="pieSelectionButton:" destination="-1" eventType="touchUpInside" id="A9d-SF-r30"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3J-a0-0L4">
+                                            <rect key="frame" x="413" y="0.0" width="187" height="134"/>
+                                            <animations/>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <state key="normal" title="Shepherd's">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="pieSelectionButton:" destination="-1" eventType="touchUpInside" id="oU8-Og-VQw"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <animations/>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="SGX-5K-uUQ">
+                                    <rect key="frame" x="0.0" y="154" width="600" height="134"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELg-kT-Wsk">
+                                            <rect key="frame" x="0.0" y="0.0" width="187" height="134"/>
+                                            <animations/>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <state key="normal" title="Apple">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="pieSelectionButton:" destination="-1" eventType="touchUpInside" id="b3r-hU-1Rf"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUV-IX-nhp">
+                                            <rect key="frame" x="207" y="0.0" width="186" height="134"/>
+                                            <animations/>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <state key="normal" title="Chocolate">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="pieSelectionButton:" destination="-1" eventType="touchUpInside" id="lZd-JD-JkK"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPx-P0-d1R">
+                                            <rect key="frame" x="413" y="0.0" width="187" height="134"/>
+                                            <animations/>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <state key="normal" title="Blueberry">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="pieSelectionButton:" destination="-1" eventType="touchUpInside" id="RJ9-BP-wiN"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <animations/>
+                                </stackView>
+                            </subviews>
+                            <animations/>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="260" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPO-i1-4mg">
+                            <rect key="frame" x="0.0" y="463" width="600" height="67"/>
+                            <animations/>
+                            <color key="backgroundColor" red="1" green="0.20000000000000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="Submit Result">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="submitResult:" destination="-1" eventType="touchUpInside" id="At0-3m-Lfs"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <animations/>
+                    <constraints>
+                        <constraint firstItem="VPO-i1-4mg" firstAttribute="height" secondItem="LEW-4b-rAa" secondAttribute="height" multiplier="1:2" id="Lyn-oz-8wg"/>
+                        <constraint firstItem="VPO-i1-4mg" firstAttribute="height" secondItem="P2u-g7-Xn3" secondAttribute="height" multiplier="1:2" id="NEQ-3C-L2j"/>
+                        <constraint firstItem="LEW-4b-rAa" firstAttribute="height" secondItem="P2u-g7-Xn3" secondAttribute="height" multiplier="3:2" id="a0U-DS-ieV"/>
+                        <constraint firstItem="VPO-i1-4mg" firstAttribute="height" secondItem="LEW-4b-rAa" secondAttribute="height" multiplier="1:2" id="p9h-K3-GJU"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="a0U-DS-ieV"/>
+                            <exclude reference="p9h-K3-GJU"/>
+                        </mask>
+                    </variation>
+                </stackView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="xA3-VP-Hsq" secondAttribute="trailing" id="2HX-nV-ODg"/>
+                <constraint firstAttribute="bottom" secondItem="xA3-VP-Hsq" secondAttribute="bottom" constant="20" id="Jhp-bP-20H"/>
+                <constraint firstItem="xA3-VP-Hsq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="c1F-Ki-2Zy"/>
+                <constraint firstItem="xA3-VP-Hsq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="djJ-ji-Pi5"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

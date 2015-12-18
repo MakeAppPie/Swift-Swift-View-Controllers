@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TwoViewController" customModule="SwiftProgNavControllerDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D83-Uo-mPV">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="two" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oyh-gJ-3xT">
+                            <rect key="frame" x="242" y="257" width="116" height="86"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="72"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vEE-qw-9Dr">
+                            <rect key="frame" x="20" y="520" width="560" height="60"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qn8-Gk-VE1">
+                                    <rect key="frame" x="0.0" y="0.0" width="275" height="60"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <state key="normal" title="Back">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="backButton:" destination="-1" eventType="touchUpInside" id="ylL-eG-bH9"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMj-V4-TK0">
+                                    <rect key="frame" x="285" y="0.0" width="275" height="60"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <state key="normal" title="Next">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="nextButton:" destination="-1" eventType="touchUpInside" id="xyf-AD-mBb"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.8666666666666667" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="vEE-qw-9Dr" secondAttribute="bottom" constant="20" id="Bjp-qQ-L25"/>
+                        <constraint firstItem="Oyh-gJ-3xT" firstAttribute="centerX" secondItem="D83-Uo-mPV" secondAttribute="centerX" id="I44-r4-1YC"/>
+                        <constraint firstItem="Oyh-gJ-3xT" firstAttribute="centerY" secondItem="D83-Uo-mPV" secondAttribute="centerY" id="KM1-RJ-lJ9"/>
+                        <constraint firstAttribute="trailing" secondItem="vEE-qw-9Dr" secondAttribute="trailing" constant="20" id="aV1-6K-gN8"/>
+                        <constraint firstItem="vEE-qw-9Dr" firstAttribute="leading" secondItem="D83-Uo-mPV" secondAttribute="leading" constant="20" id="arz-ma-Gu3"/>
+                        <constraint firstItem="qn8-Gk-VE1" firstAttribute="height" secondItem="D83-Uo-mPV" secondAttribute="height" multiplier="1:10" id="tlf-DW-Zni"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="D83-Uo-mPV" secondAttribute="bottom" id="3Wg-Yy-7Fa"/>
+                <constraint firstItem="D83-Uo-mPV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="EMA-PN-BdX"/>
+                <constraint firstItem="D83-Uo-mPV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="HrO-qn-PdK"/>
+                <constraint firstAttribute="trailing" secondItem="D83-Uo-mPV" secondAttribute="trailing" id="sOE-p5-tQl"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

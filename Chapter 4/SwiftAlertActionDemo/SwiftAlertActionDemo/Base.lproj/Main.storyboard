@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftAlertActionDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hS8-6g-he3">
+                                <rect key="frame" x="20" y="20" width="560" height="50"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2x-jN-KOe">
+                                <rect key="frame" x="393" y="80" width="177" height="50"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Pie">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pieSelection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7As-4z-ywi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPX-A4-RB9">
+                                <rect key="frame" x="20" y="80" width="177" height="50"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Hello ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="helloPizza:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Aaa-4u-ydV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYm-mZ-MOb">
+                                <rect key="frame" x="207" y="80" width="176" height="50"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Pizza">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pizzaTopping:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RAj-mi-HZs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.65098039215686276" green="0.65098039215686276" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="i2x-jN-KOe" secondAttribute="trailing" constant="10" id="5Jx-nY-7cl"/>
+                            <constraint firstItem="i2x-jN-KOe" firstAttribute="leading" secondItem="OYm-mZ-MOb" secondAttribute="trailing" constant="10" id="5KC-lJ-9NI"/>
+                            <constraint firstItem="bPX-A4-RB9" firstAttribute="height" secondItem="OYm-mZ-MOb" secondAttribute="height" id="9Dj-ca-GJ0"/>
+                            <constraint firstItem="OYm-mZ-MOb" firstAttribute="leading" secondItem="bPX-A4-RB9" secondAttribute="trailing" constant="10" id="A4U-TR-vWk"/>
+                            <constraint firstItem="bPX-A4-RB9" firstAttribute="width" secondItem="OYm-mZ-MOb" secondAttribute="width" id="Adc-yZ-Y2j"/>
+                            <constraint firstItem="bPX-A4-RB9" firstAttribute="width" secondItem="i2x-jN-KOe" secondAttribute="width" id="IAq-H4-ETZ"/>
+                            <constraint firstItem="bPX-A4-RB9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="IsX-Fs-NsF"/>
+                            <constraint firstItem="i2x-jN-KOe" firstAttribute="top" secondItem="hS8-6g-he3" secondAttribute="bottom" constant="10" id="JKC-HC-ogh"/>
+                            <constraint firstItem="hS8-6g-he3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Nq3-Yx-XfR"/>
+                            <constraint firstItem="hS8-6g-he3" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:12" id="O9m-gB-pxU"/>
+                            <constraint firstItem="bPX-A4-RB9" firstAttribute="height" secondItem="i2x-jN-KOe" secondAttribute="height" id="ZAv-ww-aug"/>
+                            <constraint firstItem="bPX-A4-RB9" firstAttribute="top" secondItem="hS8-6g-he3" secondAttribute="bottom" constant="10" id="a1h-qe-cfI"/>
+                            <constraint firstItem="OYm-mZ-MOb" firstAttribute="top" secondItem="hS8-6g-he3" secondAttribute="bottom" constant="10" id="anU-Lc-4pT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hS8-6g-he3" secondAttribute="trailing" id="gui-O9-VNH"/>
+                            <constraint firstItem="bPX-A4-RB9" firstAttribute="height" secondItem="hS8-6g-he3" secondAttribute="height" id="hOg-Yq-soU"/>
+                            <constraint firstItem="OYm-mZ-MOb" firstAttribute="leading" secondItem="bPX-A4-RB9" secondAttribute="trailing" constant="10" id="xh1-z3-xoY"/>
+                            <constraint firstItem="hS8-6g-he3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="yp9-cx-t5q"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="xh1-z3-xoY"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="myLabel" destination="hS8-6g-he3" id="ICy-Bb-E62"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="470" y="303"/>
+        </scene>
+    </scenes>
+</document>
