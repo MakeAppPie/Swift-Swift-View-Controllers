@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MySizePizzaDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Pizza" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MqQ-tw-Va5">
+                                <rect key="frame" x="20" y="20" width="560" height="36"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="vDl-ae-E0E"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2A-4U-V4s">
+                                <rect key="frame" x="20" y="66" width="275" height="64"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="736-6H-MAj"/>
+                                </constraints>
+                                <state key="normal" title="Pepperoni">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQK-x5-1Xc">
+                                <rect key="frame" x="305" y="66" width="275" height="64"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Cheese">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qx6-TC-lEP">
+                                <rect key="frame" x="0.0" y="526" width="580" height="64"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="L1K-a8-Cm1">
+                                <rect key="frame" x="20" y="140" width="560" height="376"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="s2A-4U-V4s" firstAttribute="height" secondItem="qx6-TC-lEP" secondAttribute="height" id="6GP-OS-2Ms"/>
+                            <constraint firstItem="s2A-4U-V4s" firstAttribute="height" secondItem="sQK-x5-1Xc" secondAttribute="height" id="A8G-y7-igc"/>
+                            <constraint firstItem="qx6-TC-lEP" firstAttribute="top" secondItem="L1K-a8-Cm1" secondAttribute="bottom" constant="10" id="EY9-JL-zvT"/>
+                            <constraint firstItem="L1K-a8-Cm1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Fd1-Ic-DUt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="L1K-a8-Cm1" secondAttribute="trailing" id="OFE-hP-AYA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sQK-x5-1Xc" secondAttribute="trailing" id="Q5h-Rg-tNQ"/>
+                            <constraint firstItem="MqQ-tw-Va5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="RmK-Ad-xqk"/>
+                            <constraint firstItem="MqQ-tw-Va5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="STN-ns-Xjh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qx6-TC-lEP" secondAttribute="bottom" constant="10" id="UmM-CN-rz7"/>
+                            <constraint firstItem="sQK-x5-1Xc" firstAttribute="leading" secondItem="s2A-4U-V4s" secondAttribute="trailing" constant="10" id="WVW-Go-NwA"/>
+                            <constraint firstItem="s2A-4U-V4s" firstAttribute="top" secondItem="MqQ-tw-Va5" secondAttribute="bottom" constant="10" id="YmD-3j-44a"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MqQ-tw-Va5" secondAttribute="trailing" id="bU7-oZ-74u"/>
+                            <constraint firstItem="L1K-a8-Cm1" firstAttribute="top" secondItem="s2A-4U-V4s" secondAttribute="bottom" constant="10" id="hJW-Cm-LvR"/>
+                            <constraint firstItem="s2A-4U-V4s" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="iVY-Fx-OjN"/>
+                            <constraint firstItem="qx6-TC-lEP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="kdC-lJ-THh"/>
+                            <constraint firstItem="s2A-4U-V4s" firstAttribute="width" secondItem="sQK-x5-1Xc" secondAttribute="width" id="kjv-hX-nW8"/>
+                            <constraint firstItem="sQK-x5-1Xc" firstAttribute="top" secondItem="s2A-4U-V4s" secondAttribute="top" id="oke-yR-DVa"/>
+                            <constraint firstItem="s2A-4U-V4s" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="pd4-6o-ATL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qx6-TC-lEP" secondAttribute="trailing" id="u8g-5Q-aEP"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="pd4-6o-ATL"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
